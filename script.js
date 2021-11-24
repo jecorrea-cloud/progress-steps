@@ -30,5 +30,20 @@ function update() {
       : circle.remove.classList("active");
   });
 
-  const actives = document.querySelectorAll("active");
+  const actives = document.querySelectorAll(".active");
+
+  // Follow steps for progress.style.width
+
+  //   console.log(actives.length, circles.length)
+
+  //   console.log(actives.length/circles.length)
+
+  //   console.log((actives.length/circles.length)*100)
+
+  //   console.log((actives.length/circles.length)*100 + '%')
+
+  //   console.log(((actives.length-1)/(circles.length-1))*100 + '%')
+
+  progress.style.width =
+    ((actives.length - 1) / (circles.length - 1)) * 100 + "%";
 }
